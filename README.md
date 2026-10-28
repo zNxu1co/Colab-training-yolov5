@@ -9,8 +9,14 @@
   資料集來源：[AIZOO Computer Vision Dataset](https://universe.roboflow.com/face-mask-7jfbz/aizoo-kmme2/dataset/3/download/yolov5pytorch) (需註冊帳號才能下載)
 
   進入後按`YOLOv5` ➔ `Download dataset`
+  <p align="center">
+    <img src="images/Download_dataset1.png" alt="dataset1" width="60%">
+    &nbsp;&nbsp;&nbsp;
+    <img src="images/Download_dataset2.png" alt="dataset2" width="37%">
+  </p>
+
   
-- 進入[Google Drive](https://drive.google.com/)首頁 ➔ 按下左上角的"新增"
+- 進入[Google Drive](https://drive.google.com/) ➔ 上傳剛才下載並解壓縮後的資料夾 ➔ 按下左上角的"新增"
 
   ![googledrive1](images/google_drive.png)
 - 按"更多" ➔ "Google Colaboratory"
@@ -37,7 +43,7 @@
 ***
 
 ### Step 3：程式碼實作
-- 新增一個"程式碼儲存格"接著輸入：
+- 新增**第一個**"程式碼儲存格"接著輸入：
   ```python
   import os
   from google.colab import drive
@@ -45,3 +51,19 @@
   %cd /content/drive/MyDrive/
   ```
   作用：執行掛載指令，連接個人的 Google Drive 並映射及切換到 Colab 虛擬機的 `/content/drive` 目錄下，
+  
+- 新增**第二個**"程式碼儲存格"接著輸入：
+  ```python
+  !git clone https://github.com/ultralytics/yolov5.git
+  %cd yolov5
+  !pip install -r requirements.txt
+  ```
+  作用：`clone` YOLOv5 的儲存庫至 Google Drive 並切換至該資料夾下開始安裝依賴項
+  
+- 新增**第三個**"程式碼儲存格"接著輸入：
+  ```python
+  !python /content/drive/MyDrive/yolov5/train.py --img 640 --batch -1 --epochs 50 --data /content/drive/MyDrive/app/AIZOO-3/data.yaml --weights yolov5s.pt
+  ```
+  作用：啟動 YOLOv5 物件檢測模型的訓練流程，它透過呼叫儲存在 Google Drive 中的 train.py 腳本，載入 yolov5s.pt 預訓練權重與 data.yaml 資料集設定，進行 50 個 Epoch 的模型微調訓練。
+
+  備註：本次使用yolov5 small模型，可依需求更改
