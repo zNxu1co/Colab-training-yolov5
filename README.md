@@ -15,4 +15,10 @@
   </p>
 
 ### Step 2：Google Colaboratory設定及程式碼實作
-- 按下編輯按鈕
+- 按下"編輯" ➔ "筆記本設定"
+  
+  ![setting](images/colab_setting.png)
+
+- 將"硬體加速器"從`CPU`改為`T4 GPU`
+  
+  ![selectGPU](images/colab_selectGPU.png)
