@@ -3,7 +3,13 @@
 ### 本專案旨在訓練[YOLOv5](https://github.com/ultralytics/yolov5)用於檢測是否配戴口罩
 
 
-### Step 1：Google Drive準備
+### Step 1：事前準備
+- 下載並解壓縮用於訓練模型的資料集
+  
+  資料集來源：[AIZOO Computer Vision Dataset](https://universe.roboflow.com/face-mask-7jfbz/aizoo-kmme2/dataset/3/download/yolov5pytorch) (需註冊帳號才能下載)
+
+  進入後按`YOLOv5` ➔ `Download dataset`
+  
 - 進入[Google Drive](https://drive.google.com/)首頁 ➔ 按下左上角的"新增"
 
   ![googledrive1](images/google_drive.png)
@@ -36,5 +42,6 @@
   import os
   from google.colab import drive
   drive.mount('/content/drive')
+  %cd /content/drive/MyDrive/
   ```
-  作用：執行掛載指令，將個人的 Google Drive 連接並映射到 Colab 虛擬機的 `/content/drive` 目錄下
+  作用：執行掛載指令，連接個人的 Google Drive 並映射及切換到 Colab 虛擬機的 `/content/drive` 目錄下，
