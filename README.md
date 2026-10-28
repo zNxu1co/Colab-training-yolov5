@@ -14,3 +14,5 @@
     <img src="images/google_driveCOLAB.png" alt="colab">
   </p>
 
+### Step 2：Google Colaboratory設定及程式碼實作
+- 按下編輯按鈕
