@@ -4,4 +4,5 @@
 
 ### Step 1：Google Drive準備
 - 進入[Google Drive](https://drive.google.com/)首頁
+- [googledrive1](google_drive.png)
 - 
