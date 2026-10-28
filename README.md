@@ -66,7 +66,7 @@
   ```
   作用：執行 YOLOv5 物件檢測模型的訓練流程，它透過呼叫儲存在 Google Drive 中的 train.py 腳本，載入 yolov5s.pt 預訓練權重與 data.yaml 資料集設定，進行 50 個 Epoch 的模型微調訓練。
 
-  備註：本次使用YOLOv5 small模型，可參考下方表格並依需求更改
+  備註：本次使用YOLOv5 Small模型，可參考下方表格並依需求更改
 
   ### YOLOv5 模型規格對比
 
