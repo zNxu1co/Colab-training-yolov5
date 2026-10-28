@@ -3,9 +3,14 @@
 ### 本專案旨在訓練[YOLOv5](https://github.com/ultralytics/yolov5)用於檢測是否配戴口罩
 
 ### Step 1：Google Drive準備
-- 進入[Google Drive](https://drive.google.com/)首頁
+- 進入[Google Drive](https://drive.google.com/)首頁 ➔ 按下左上角的"新增"
 
   ![googledrive1](images/google_drive.png)
-- 按下左上角的"新增"➔
-  
-  ![new](images/google_driveNew.png)
+- 按"更多" ➔ "Google Colaboratory"
+
+  <p align="center">
+    <img src="images/google_driveMORE.png" alt="more">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="images/google_driveCOLAB.png" alt="colab">
+  </p>
+
