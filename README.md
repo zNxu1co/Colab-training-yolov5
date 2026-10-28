@@ -10,7 +10,7 @@
 
   <p align="center">
     <img src="images/google_driveMORE.png" alt="more">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;
     <img src="images/google_driveCOLAB.png" alt="colab">
   </p>
 
