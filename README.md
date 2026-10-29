@@ -62,11 +62,26 @@
   
 - 新增**第三個**"程式碼儲存格"接著輸入：
   ```python
-  !python /content/drive/MyDrive/yolov5/train.py --img 640 --batch -1 --epochs 50 --data /content/drive/MyDrive/app/AIZOO-3/data.yaml --weights yolov5s.pt
+  !python /content/drive/MyDrive/yolov5/train.py --img 640 --batch -1 --epochs 50 --data /content/drive/MyDrive/AIZOO-3/data.yaml --weights yolov5s.pt
   ```
-  作用：執行 YOLOv5 物件檢測模型的訓練流程，它透過呼叫儲存在 Google Drive 中的 train.py 腳本，載入 yolov5s.pt 預訓練權重與 data.yaml 資料集設定，進行 50 個 Epoch 的模型微調訓練。
+  作用：執行 YOLOv5 物件檢測模型的訓練流程，它透過呼叫儲存在 Google Drive 中的 train.py 腳本，載入 yolov5s.pt 預訓練權重與 data.yaml 資料集設定，進行 50 個 Epoch 的模型微調訓練；**訓練過程可能需要幾個小時**。
 
-  備註：本次使用YOLOv5 Small模型，可參考下方表格並依需求更改
+  參數說明：
+  
+  `!python /content/drive/MyDrive/yolov5/train.py` 執行腳本路徑
+  
+  `--img` 圖片解析度
+  
+  `--batch` 批次大小
+  
+  `--epochs` 訓練輪數
+  
+  `--data /content/drive/MyDrive/AIZOO-3/data.yaml` 資料集設定檔及路徑
+  
+  `--weights` 預訓練權重
+    
+
+  **備註：本次使用YOLOv5 Small模型，可參考下方表格並依需求更改**
 
   ### YOLOv5 模型規格對比
 
@@ -77,3 +92,5 @@
   | **YOLOv5m** | Medium | ~21.2M | ~40.8 MB | 精確度與推理速度平衡的最佳選擇 |
   | **YOLOv5l** | Large | ~46.5M | ~89.3 MB | 高精確度需求、計算資源充足的伺服器 |
   | **YOLOv5x** | XLarge | ~86.7M | ~166.0 MB | 追求 mAP 精確度，不在意運算資源 |
+
+- 訓練完成後
