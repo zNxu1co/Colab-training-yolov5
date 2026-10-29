@@ -93,4 +93,33 @@
   | **YOLOv5l** | Large | ~46.5M | ~89.3 MB | 高精確度需求、計算資源充足的伺服器 |
   | **YOLOv5x** | XLarge | ~86.7M | ~166.0 MB | 追求 mAP 精確度，不在意運算資源 |
 
-- 訓練完成後
+### Step 4：模型效果演示
+- 模型訓練完成後可以讓它檢測圖片裡的人是否配戴口罩，先將圖片上傳至 Google Drive 並記住路徑
+  
+  接著，輸入下方程式：
+  ```python
+  !python /content/drive/MyDrive/yolov5/detect.py --weights /content/drive/MyDrive/yolov5/runs/train/exp/weights/best.pt --source "你上傳的圖片的路徑" --conf 0.25
+  ```
+  作用：執行 YOLOv5 物件檢測。它呼叫 detect.py 程式，讀取先前訓練成果最好的模型權重，對指定的圖片進行辨識與標記，並過濾掉信心度過低的預測結果。
+
+  參數說明：
+  
+  `!python /content/drive/MyDrive/yolov5/detect.py` 執行腳本路徑
+  
+  `--weights` 模型權重路徑
+  
+  `--source` 圖片檢測來源路徑
+  
+  `---conf` 信心度門檻
+
+- 執行範例
+  <table>
+  <tr>
+    <td align="center"><img src="images/test.png" alt="test" width="100%"><br><sub><b>原圖</b></sub></td>
+    <td align="center"><img src="images/test_after.png" alt="test_after" width="100%"><br><sub><b>執行後</b></sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="images/test2.jpg" alt="test2" width="100%"><br><sub><b>原圖</b></sub></td>
+    <td align="center"><img src="images/test2_after.jpg" alt="test2_after" width="100%"><br><sub><b>執行後</b></sub></td>
+  </tr>
+  </table>
