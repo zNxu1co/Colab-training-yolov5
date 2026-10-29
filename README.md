@@ -93,6 +93,8 @@
   | **YOLOv5l** | Large | ~46.5M | ~89.3 MB | 高精確度需求、計算資源充足的伺服器 |
   | **YOLOv5x** | XLarge | ~86.7M | ~166.0 MB | 追求 mAP 精確度，不在意運算資源 |
 
+***
+
 ### Step 4：模型效果演示
 - 模型訓練完成後可以讓它檢測圖片裡的人是否配戴口罩，先將圖片上傳至 Google Drive 並記住路徑
   
@@ -112,7 +114,7 @@
   
   `---conf` 信心度門檻
 
-- 執行範例
+- **執行範例**
   <table>
   <tr>
     <td align="center"><img src="images/test.png" alt="test" width="100%"><br><sub><b>原圖</b></sub></td>
@@ -123,3 +125,21 @@
     <td align="center"><img src="images/test2_after.jpg" alt="test2_after" width="100%"><br><sub><b>執行後</b></sub></td>
   </tr>
   </table>
+
+***
+
+### 常見問題：
+
+Q：程式找不到data.yaml
+
+A：data.yaml通常位於資料集的資料夾裡，可以直接將--data後的路徑指定為data.yaml所存在的路徑，例：/content/drive/MyDrive/AIZOO-3/data.yaml
+
+Q：程式找不到train.py
+
+A：train.py通常位於yolo模型的資料夾裡，可以直接將!python後的路徑指定為train.py所存在的路徑，例：/content/drive/MyDrive/yolov5/train.py
+
+Q：沒有找到val資料夾
+
+A：將data.yaml裡的val路徑指定為跟train一樣的路徑
+
+
