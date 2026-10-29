@@ -42,7 +42,7 @@
   ![checkGPU](images/colab_checkGPU.png)
 ***
 
-### Step 3：程式碼實作
+### Step 3：模型訓練
 - 新增**第一個**"程式碼儲存格"接著輸入：
   ```python
   import os
