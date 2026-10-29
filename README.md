@@ -130,16 +130,28 @@
 
 ### 常見問題：
 
-Q：程式找不到data.yaml
+#### Q：程式找不到 `data.yaml`
+A：`data.yaml` 通常位於資料集資料夾內。請將 `--data` 參數指定為正確的路徑，例：
+  ```bash
+  --data /content/drive/MyDrive/AIZOO-3/data.yaml
+  ```
 
-A：data.yaml通常位於資料集的資料夾裡，可以直接將--data後的路徑指定為data.yaml所存在的路徑，例：/content/drive/MyDrive/AIZOO-3/data.yaml
+#### Q：程式找不到 `train.py`
+A：`train.py` 通常位於 YOLOv5 專案目錄內。請將指令中的路徑修改為對應位置，例：
+  ```bash
+  !python /content/drive/MyDrive/yolov5/train.py
+  ```
 
-Q：程式找不到train.py
+#### Q：沒有找到 `val` 資料夾
+A：請開啟 `data.yaml` 檔案，將 `val` 的路徑指定為與 `train` 相同的路徑。
 
-A：train.py通常位於yolo模型的資料夾裡，可以直接將!python後的路徑指定為train.py所存在的路徑，例：/content/drive/MyDrive/yolov5/train.py
+***
+<details>
+<summary><h3><b>圖片來源</b></h3></summary>
 
-Q：沒有找到val資料夾
+<br>
 
-A：將data.yaml裡的val路徑指定為跟train一樣的路徑
+* [測試圖片 1](https://www.magnific.com/zh/%E5%85%8D%E8%B2%BB%E5%9C%96%E7%89%87/woman-with-medical-mask-out-sale-shopping-spree-with-shopping-bag_10182633.htm#fromView=keyword&page=1&position=3&uuid=cadfe28e-f29f-4695-aa05-2d55900ca5a3&track=ais_hybrid&query=%E6%88%B4%E5%8F%A3%E7%BD%A9%E7%9A%84%E4%BA%BA)
+* [測試圖片 2](https://www.healthnews.com.tw/imageFile/202610/1a834ac8090a600b2b4eb22af7a7d79c_l.jpg)
 
-
+</details>
